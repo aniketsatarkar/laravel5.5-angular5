@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,13 +12,12 @@ use Illuminate\Http\Request;
 */
 // Include CORS -> to allow access headers
 Route::group(['middleware' => 'cors'], function () {
-    Route::get('title', function (){
+    Route::get('title', function () {
         return response()->json([
             'data' => [
-                'title' => 'Page Title',
-                'message' => 'Example to show how to use service'
-            ]
+                'title'   => 'Page Title',
+                'message' => 'Example to show how to use service',
+            ],
         ]);
     });
 });
-
